@@ -12,13 +12,28 @@ from time import sleep
 
 if __name__=='__main__':
 	if len(sys.argv) is not 2:
-		print '[*] usage : python gdbdiff.py [executable]'
+		print '[*] usage : python gdbdiff.py [disassembly file]'
+		print '        ex) python gdbdiff.py test.s'
 		sys.exit(1)
 
+
+
+	# Sanity check
+	f = open('test.s','r')
+	data = f.read()
+	if 'here:' not in data:
+		 print '[!] Oops! '
+		 print '[!] You should set \'here\' named symbol before running gdbinit!'
+		 sys.exit(1)
+	f.close()
+
+
+	# gdbdiff hangs after gdb.attach()... ITK how to resume it... Got out of the incident by using fork() method.
 	pid = os.fork()
-	
+	os.system('gcc -o bin ' + sys.argv[1])
+
 	if pid == 0: # child
-		filename = sys.argv[1]
+		filename = 'bin'
 		myprocess = process(filename)
 		gdb.attach(myprocess, '''
 		b here
@@ -44,6 +59,7 @@ if __name__=='__main__':
 		''')
 	
 	else: # parant
+		# wait suitable time, and diff.
 		sleep(1.5)
 		os.system('meld 1 2')
-		os.system('rm 1 2')
+		os.system('rm bin 1 2')
