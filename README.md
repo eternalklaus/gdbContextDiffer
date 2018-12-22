@@ -23,7 +23,12 @@ For example, in case of *bsf*, set symbol like below.
     $ sudo apt-get install meld # graphical diff tools
     $ git clone https://github.com/eternalklaus/gdbContextDiffer.git
     $ python gdbdiff.py test.s
-<br>
+<br>  
+  
+## User guide video
+[Here](https://youtu.be/aTjqor7eMyM) is user guide. (Youtube)
+  
+  
 Enjoy gdbContextDiffer!  
 
 
