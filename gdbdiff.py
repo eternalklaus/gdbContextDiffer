@@ -1,4 +1,4 @@
- 	#!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pwnlib
 from pwnlib import *
@@ -38,7 +38,6 @@ if __name__=='__main__':
 		gdb.attach(myprocess, '''
 		b here
 		r
-		nexti
 		
 		echo context before instruction\n
 		set logging file 1
