@@ -3,14 +3,16 @@
 main:
     nop
     nop
-here: # set this symbol. because in nexti mode, some flags canbe different with normal r status.
-    mov $0x1, %ebx
-    bsf MYSYM, %ebx
-    nop
-    nop
-    nop
-    nop
-    nop
-    nop
-MYSYM:
-    .byte 0xff, 0xff, 0x00, 0x00
+here:
+    lea WRITABLE_1, %ebx 
+    xor $0x22, 0x1(%ebx)
+    ret
+
+
+
+.section .data
+.align 64
+WRITABLE_1:
+    .byte 0x00
+WRITABLE:
+    .byte 0x44, 0x33, 0x22, 0x11

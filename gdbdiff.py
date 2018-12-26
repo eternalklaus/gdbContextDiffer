@@ -16,10 +16,10 @@ if __name__=='__main__':
 		print '        ex) python gdbdiff.py test.s'
 		sys.exit(1)
 
-
+    
 
 	# Sanity check
-	f = open('test.s','r')
+	f = open(sys.argv[1],'r')
 	data = f.read()
 	if 'here:' not in data:
 		 print '[!] Oops! '
