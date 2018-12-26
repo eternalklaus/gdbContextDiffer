@@ -23,7 +23,7 @@ if __name__=='__main__':
 	data = f.read()
 	if 'here:' not in data:
 		 print '[!] Oops! '
-		 print '[!] You should set \'here\' named symbol before running gdbinit!'
+		 print '[!] You should set \'here\' named symbol before running gdbdiff.py!'
 		 sys.exit(1)
 	f.close()
 
