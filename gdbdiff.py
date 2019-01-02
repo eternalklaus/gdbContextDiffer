@@ -44,6 +44,24 @@ if __name__=='__main__':
 		set logging overwrite
 		set logging on
 		i r
+		echo eax: 
+		p/t $eax
+		echo ecx: 
+		p/t $ecx
+		echo edx: 
+		p/t $edx
+		echo ebx: 
+		p/t $ebx
+		echo esp: 
+		p/t $esp
+		echo ebp: 
+		p/t $ebp
+		echo esi: 
+		p/t $esi
+		echo edi: 
+		p/t $edi
+		echo eip: 
+		p/t $eip
 		set logging off
 		
 		nexti
@@ -52,6 +70,24 @@ if __name__=='__main__':
 		set logging overwrite
 		set logging on
 		i r
+		echo eax: 
+		p/t $eax
+		echo ecx: 
+		p/t $ecx
+		echo edx: 
+		p/t $edx
+		echo ebx: 
+		p/t $ebx
+		echo esp: 
+		p/t $esp
+		echo ebp: 
+		p/t $ebp
+		echo esi: 
+		p/t $esi
+		echo edi: 
+		p/t $edi
+		echo eip: 
+		p/t $eip
 		set logging off
 		
 		quit
