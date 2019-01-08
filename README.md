@@ -25,11 +25,7 @@ For example, if you're curious about *bsf*, set symbol like below.
     $ cd gdbContextDiffer  
     $ python gdbdiff.py test.s  
 <br>  
-  
-## User guide video
-[Here](https://youtu.be/aTjqor7eMyM) is user guide. (Youtube)
-  
-  
+
 Enjoy gdbContextDiffer!  
 
 
