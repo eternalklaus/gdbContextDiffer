@@ -8,6 +8,20 @@ import subprocess
 import os
 import sys
 from time import sleep
+import re
+
+def remove_dollor(filename):
+	f = open(filename,'r')
+	content = f.read()
+	replaced = re.sub('\$' + '[0-9a-f]+', '', content)
+	f.close()
+
+	# Why? why python cannot read&write one file in the same time?
+	f = open(filename,'w')
+	f.write(replaced)
+	f.close()
+	
+
 
 
 if __name__=='__main__':
@@ -44,23 +58,23 @@ if __name__=='__main__':
 		set logging overwrite
 		set logging on
 		i r
-		echo eax: 
+		echo eax 
 		p/t $eax
-		echo ecx: 
+		echo ecx 
 		p/t $ecx
-		echo edx: 
+		echo edx 
 		p/t $edx
-		echo ebx: 
+		echo ebx 
 		p/t $ebx
-		echo esp: 
+		echo esp 
 		p/t $esp
-		echo ebp: 
+		echo ebp 
 		p/t $ebp
-		echo esi: 
+		echo esi 
 		p/t $esi
-		echo edi: 
+		echo edi 
 		p/t $edi
-		echo eip: 
+		echo eip 
 		p/t $eip
 		set logging off
 		
@@ -70,23 +84,23 @@ if __name__=='__main__':
 		set logging overwrite
 		set logging on
 		i r
-		echo eax: 
+		echo eax 
 		p/t $eax
-		echo ecx: 
+		echo ecx 
 		p/t $ecx
-		echo edx: 
+		echo edx 
 		p/t $edx
-		echo ebx: 
+		echo ebx 
 		p/t $ebx
-		echo esp: 
+		echo esp 
 		p/t $esp
-		echo ebp: 
+		echo ebp 
 		p/t $ebp
-		echo esi: 
+		echo esi 
 		p/t $esi
-		echo edi: 
+		echo edi 
 		p/t $edi
-		echo eip: 
+		echo eip 
 		p/t $eip
 		set logging off
 		
@@ -96,5 +110,10 @@ if __name__=='__main__':
 	else: # parant
 		# wait suitable time, and diff.
 		sleep(1.5)
+
+		remove_dollor('1')
+		remove_dollor('2')
+
+
 		os.system('meld 1 2')
 		os.system('rm bin 1 2')

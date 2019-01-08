@@ -6,17 +6,11 @@ get_pc_thunk.si:
 
 
 main:
-   mov $0x777, %edx 
-   mov $0x777, %eax
-   mov $0x3, %esi
+   mov $0x71231284, %eax
+   mov $0xfff01239, %esi
+   mov $0x0, %edx 
 here:
-   not    %esi
-   pop    %esi
-   push   %esi
-   sal    %esi
-   sar    %esi
-   shl    %esi
-   shr    %esi
+   imul    %esi
 
 
 .section .data
