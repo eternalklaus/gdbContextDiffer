@@ -16,7 +16,7 @@ def remove_dollor(filename):
 	replaced = re.sub('\$' + '[0-9a-f]+', '', content)
 	f.close()
 
-	# Why? why python cannot read&write one file in the same time?
+	# Why? why python cannot read&write one file at the same time?
 	f = open(filename,'w')
 	f.write(replaced)
 	f.close()
@@ -103,7 +103,8 @@ if __name__=='__main__':
 		echo eip 
 		p/t $eip
 		set logging off
-		
+
+		shell sleep 0.5
 		quit
 		''')
 	
