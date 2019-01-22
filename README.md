@@ -31,12 +31,18 @@ For example, if you're curious about *bsf*, set symbol like below.
 
 ## Run gdbdiff
     $ sudo apt-get install meld # graphical diff tools  
-    $ git clone https://github.com/eternalklaus/gdbContextDiffer.git  
-    $ cd gdbContextDiffer  
     $ python gdbdiff.py test.s  
+    
+<br>
+
+## Output result  
+<img src="./img/result.png" width="1000">
+    
+<br>
+<br>
 <br>  
 
-Enjoy gdbContextDiffer!  
+*Enjoy gdbContextDiffer!*  
 
 
 
