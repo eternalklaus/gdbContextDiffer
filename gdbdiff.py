@@ -54,7 +54,14 @@ if __name__=='__main__':
 		r
 		
 		echo context before instruction\n
+		
+		
+
 		set logging file 1
+
+		shell sleep 0.2
+
+
 		set logging overwrite
 		set logging on
 		i r
@@ -78,6 +85,8 @@ if __name__=='__main__':
 		p/t $eip
 		set logging off
 		
+		shell sleep 0.2
+
 		nexti
 		echo context after instruction\n
 		set logging file 2
@@ -104,7 +113,7 @@ if __name__=='__main__':
 		p/t $eip
 		set logging off
 
-		shell sleep 0.5
+		shell sleep 0.2
 		quit
 		''')
 	
