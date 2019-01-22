@@ -4,17 +4,17 @@
 <br>
 
 
-## About gdbContextDiffer
-Compare register context before/after executing the instruction.
-I developed *gdbContextDiffer* for those who are too lazy to even debug.  
+## About gdbContextDiffer  
 
-Kr  
+<img src="./img/lazy-to-debug.png" width="200">
 
-    가령, "lar" 이라는 인스트럭션이 있습니다.   
-    구글에서 document 찾아봐도 설명도 부족하고.. 알아듣기도 힘들어요
-    인스트럭션을 직접 실행 및 디버깅해보면 보다 쉽게 이해할 수 있습니다.  
-    근데 디버깅하기 귀찮자나요 ㅎㅅㅎ
-    그래서 인스트럭션 실행 전후로 레지스터 컨텍스트를 비교해주는 자동화 도구를 만들었습니다.  
+Compare register context before/after executing the instruction.  
+
+Assume that we're searching about instruction 'lar'   
+When we search on Google, we found intel instruction set document but is extremely long and difficult to understand.  
+To understand exactly what 'lar' is, we can try execute it and compare the context using gdb.   
+But It's bothinering to debug each instruction.  
+So I developed gdbContextDiffer, automatically compares register context before/after executing instruction.  
 <br>
 
 ## Prepare  
