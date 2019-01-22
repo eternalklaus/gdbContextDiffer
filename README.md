@@ -10,11 +10,12 @@
 
 Compare register context before/after executing the instruction.  
 
-Assume that we're searching about instruction 'lar'   
-When we search on Google, we found intel instruction set document but is extremely long and difficult to understand.  
-To understand exactly what 'lar' is, we can try execute it and compare the context using gdb.   
-But It's bothinering to debug each instruction.  
-So I developed gdbContextDiffer, automatically compares register context before/after executing instruction.  
+    Assume that we're searching about instruction 'lar'   
+    When we search on Google, we found intel instruction set document.
+    ...But is extremely long and hard to understand.  
+    To understand exactly what 'lar' is, we can try execute it and compare the context using gdb.   
+    ...But It's bothinering to debug each instruction.  
+    So I developed gdbContextDiffer, automatically compares register context before/after executing instruction.  
 <br>
 
 ## Prepare  
